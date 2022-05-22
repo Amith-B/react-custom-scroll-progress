@@ -1,1 +1,1 @@
-"use strict";
+"use strict";function e(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("react"));exports.ProgressBar=({children:e,style:r,hideNativeScrollbar:l=!1})=>t.default.createElement("div",{className:"rcsp-scrollbar__container",style:{width:"100%",height:"100%",...r}},t.default.createElement("div",{className:"rcsp-scrollbar__content "+(l?"rcsp-native-scrollbar__hidden":""),style:{width:"100%",height:"100%",overflow:"auto"}},e));

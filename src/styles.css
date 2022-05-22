@@ -1,0 +1,43 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+.rcsp-native-scrollbar__hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefx */
+.rcsp-native-scrollbar__hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.rcsp-scrollbar__position-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.rcsp-scrollbar__position-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.rcsp-scrollbar__position-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.rcsp-scrollbar__position-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.rcsp-scrollbar__thumb {
+  background-color: red;
+  border-radius: 10px;
+}

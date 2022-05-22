@@ -4,7 +4,7 @@
   "description": "A component wrapper to show the scroll progress of it's child component",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 6006 -s public",
+    "start": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "build-lib": "rollup -c"
   },
