@@ -16,7 +16,7 @@ function ScrollTrack({
 
   return (
     <div
-      className={`rcsp-scrollbar__track rcsp-scrollbar__track rcsp-scrollbar__position-${checkScrollBarPosition(
+      className={`rcsp-progressbar__track rcsp-progressbar__position-${checkScrollBarPosition(
         scrollBarPosition
       )}`}
       style={{
@@ -26,7 +26,7 @@ function ScrollTrack({
       }}
     >
       <div
-        className="rcsp-scrollbar__thumb"
+        className="rcsp-progressbar__thumb"
         style={{
           ...(isHorizontal() ? { height: "100%" } : { width: "100%" }),
           ...scrollBarThumbStyle,

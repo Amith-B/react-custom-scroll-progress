@@ -9,35 +9,35 @@
   scrollbar-width: none;
 }
 
-.rcsp-scrollbar__position-left {
+.rcsp-progressbar__position-left {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
 }
 
-.rcsp-scrollbar__position-top {
+.rcsp-progressbar__position-top {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
 }
 
-.rcsp-scrollbar__position-right {
+.rcsp-progressbar__position-right {
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
 }
 
-.rcsp-scrollbar__position-bottom {
+.rcsp-progressbar__position-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
 }
 
-.rcsp-scrollbar__thumb {
+.rcsp-progressbar__thumb {
   background-color: red;
   border-radius: 10px;
 }
