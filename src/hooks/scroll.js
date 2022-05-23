@@ -33,6 +33,7 @@ export const useScroll = (contentRef) => {
   }, [contentRef]);
 
   const handleScroll = ($event) => {
+    $event.stopPropagation();
     const target = $event.target;
     calculatePercent(target);
   };

@@ -33,8 +33,42 @@ export default {
 export const Basic = (args) => {
   return (
     <ProgressBar {...args}>
-      {Array.from(Array(args._exampleTextLineCount).keys()).map(() => (
-        <div style={{ whiteSpace: "nowrap" }}>{args._exampleText}</div>
+      {Array.from(Array(args._exampleTextLineCount).keys()).map((i) => (
+        <div key={i} style={{ whiteSpace: "nowrap" }}>
+          {args._exampleText}
+        </div>
+      ))}
+    </ProgressBar>
+  );
+};
+
+export const Nested = (args) => {
+  return (
+    <ProgressBar {...args}>
+      {Array.from(Array(args._exampleTextLineCount).keys()).map((i) => (
+        <div key={"a" + i} style={{ whiteSpace: "nowrap" }}>
+          {args._exampleText}
+        </div>
+      ))}
+      <ProgressBar
+        {...args}
+        style={{
+          margin: "auto",
+          border: "1px solid",
+          height: "100px",
+          width: "400px",
+        }}
+      >
+        {Array.from(Array(args._exampleTextLineCount).keys()).map((i) => (
+          <div key={"b" + i} style={{ whiteSpace: "nowrap" }}>
+            {args._exampleText}
+          </div>
+        ))}
+      </ProgressBar>
+      {Array.from(Array(args._exampleTextLineCount).keys()).map((i) => (
+        <div key={"c" + i} style={{ whiteSpace: "nowrap" }}>
+          {args._exampleText}
+        </div>
       ))}
     </ProgressBar>
   );
@@ -49,4 +83,9 @@ Basic.args = {
   _exampleTextLineCount: 40,
   _exampleText:
     "Mollit Lorem cillum irure eiusmod aliquip ea officia. Exercitation ipsum officia laborum. Laboris enim quis incididunt labore esse ea voluptate",
+};
+
+Nested.args = {
+  ...Basic.args,
+  _exampleTextLineCount: 10,
 };
