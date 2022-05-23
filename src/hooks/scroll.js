@@ -14,8 +14,26 @@ export const useScroll = (contentRef) => {
     };
   }, [contentRef]);
 
+  useEffect(() => {
+    const reObs = new ResizeObserver((entries) => {
+      if (entries[0]) {
+        calculatePercent(contentRef.current);
+      }
+    });
+
+    if (contentRef.current.childElementCount === 1) {
+      reObs.observe(contentRef.current.firstChild);
+    }
+
+    return () => reObs.disconnect();
+  }, [contentRef]);
+
   const handleScroll = ($event) => {
     const target = $event.target;
+    calculatePercent(target);
+  };
+
+  const calculatePercent = (target) => {
     const percentY =
       (target.scrollTop / (target.scrollHeight - target.clientHeight)) * 100;
     const percentX =

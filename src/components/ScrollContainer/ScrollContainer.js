@@ -34,7 +34,12 @@ export const ScrollContainer = React.forwardRef(
             overflow: "auto",
           }}
         >
-          {children}
+          <div
+            className="rcsp-scrollbar__content-wrapper"
+            style={{ width: "fit-content" }}
+          >
+            {children}
+          </div>
         </div>
       </div>
     );
