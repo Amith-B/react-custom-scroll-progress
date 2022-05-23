@@ -1,1 +1,0 @@
-import e from"react";const t=({children:t,style:r,hideNativeScrollbar:l=!1})=>e.createElement("div",{className:"rcsp-scrollbar__container",style:{width:"100%",height:"100%",...r}},e.createElement("div",{className:"rcsp-scrollbar__content "+(l?"rcsp-native-scrollbar__hidden":""),style:{width:"100%",height:"100%",overflow:"auto"}},t));export{t as ProgressBar};
