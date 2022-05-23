@@ -25,20 +25,24 @@ export const ProgressBar = ({
       ref={contentRef}
       hideNativeScrollbar={hideNativeScrollbar}
       yScrollComponent={
-        <ScrollTrack
-          percent={yPercent}
-          scrollBarThumbStyle={yScrollBarThumbStyle}
-          scrollBarTrackStyle={yScrollBarTrackStyle}
-          scrollBarPosition={yScrollBarPosition}
-        />
+        yPercent !== undefined && (
+          <ScrollTrack
+            percent={yPercent}
+            scrollBarThumbStyle={yScrollBarThumbStyle}
+            scrollBarTrackStyle={yScrollBarTrackStyle}
+            scrollBarPosition={yScrollBarPosition}
+          />
+        )
       }
       xScrollComponent={
-        <ScrollTrack
-          percent={xPercent}
-          scrollBarThumbStyle={xScrollBarThumbStyle}
-          scrollBarTrackStyle={xScrollBarTrackStyle}
-          scrollBarPosition={xScrollBarPosition}
-        />
+        xPercent !== undefined && (
+          <ScrollTrack
+            percent={xPercent}
+            scrollBarThumbStyle={xScrollBarThumbStyle}
+            scrollBarTrackStyle={xScrollBarTrackStyle}
+            scrollBarPosition={xScrollBarPosition}
+          />
+        )
       }
     />
   );

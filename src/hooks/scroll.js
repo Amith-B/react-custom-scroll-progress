@@ -4,6 +4,9 @@ export const useScroll = (contentRef) => {
   const [xPercent, setXPercent] = useState(0);
   const [yPercent, setYPercent] = useState(0);
 
+  const [yViewPercent, setYViewPercent] = useState(0);
+  const [xViewPercent, setXViewPercent] = useState(0);
+
   useEffect(() => {
     contentRef.current &&
       contentRef.current.addEventListener("scroll", handleScroll);
@@ -23,6 +26,7 @@ export const useScroll = (contentRef) => {
 
     if (contentRef.current.childElementCount === 1) {
       reObs.observe(contentRef.current.firstChild);
+      reObs.observe(contentRef.current);
     }
 
     return () => reObs.disconnect();
@@ -34,14 +38,34 @@ export const useScroll = (contentRef) => {
   };
 
   const calculatePercent = (target) => {
-    const percentY =
-      (target.scrollTop / (target.scrollHeight - target.clientHeight)) * 100;
-    const percentX =
-      (target.scrollLeft / (target.scrollWidth - target.clientWidth)) * 100;
+    const viewPercentY = (target.clientHeight / target.scrollHeight) * 100;
+    const viewPercentX = (target.clientWidth / target.scrollWidth) * 100;
 
+    const percentY =
+      viewPercentY === 100
+        ? undefined
+        : (target.scrollTop / (target.scrollHeight - target.clientHeight)) *
+          100;
+    const percentX =
+      viewPercentX === 100
+        ? undefined
+        : (target.scrollLeft / (target.scrollWidth - target.clientWidth)) * 100;
+
+    setXViewPercent(viewPercentX);
     setXPercent(percentX);
+
+    setYViewPercent(viewPercentY);
     setYPercent(percentY);
   };
 
-  return [yPercent, xPercent, setYPercent, setXPercent];
+  return [
+    yPercent,
+    xPercent,
+    setYPercent,
+    setXPercent,
+    yViewPercent,
+    xViewPercent,
+    setYViewPercent,
+    setXViewPercent,
+  ];
 };
