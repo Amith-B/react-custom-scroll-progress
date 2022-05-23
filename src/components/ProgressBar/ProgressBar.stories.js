@@ -41,7 +41,7 @@ export const Basic = (args) => {
 };
 
 Basic.args = {
-  style: { height: "calc(100vh - 50px)" },
+  style: { height: "calc(100vh - 50px)", border: "1px solid" },
   hideNativeScrollbar: true,
   yScrollBarPosition: positions.top,
   xScrollBarPosition: positions.left,
