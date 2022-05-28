@@ -14,9 +14,19 @@ export const ProgressBar = ({
   yScrollBarTrackStyle,
   xScrollBarThumbStyle,
   xScrollBarTrackStyle,
+  onScroll,
 }) => {
   const contentRef = useRef();
   const [yPercent, xPercent] = useScroll(contentRef);
+
+  useEffect(() => {
+    if (onScroll && typeof onScroll === "function") {
+      onScroll({
+        verticalPercent: yPercent,
+        horizontalPercent: xPercent,
+      });
+    }
+  }, [yPercent, xPercent]);
 
   return (
     <ScrollContainer

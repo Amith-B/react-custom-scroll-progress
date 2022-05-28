@@ -20,6 +20,7 @@ export const CircularProgressBar = ({
   hideHorizontalScrollProgress = false,
   autoSplit = true,
   autoHide = false,
+  onScroll,
 }) => {
   const contentRef = useRef();
   const [yPercent, xPercent] = useScroll(contentRef);
@@ -34,6 +35,12 @@ export const CircularProgressBar = ({
   }, [currentState]);
 
   useEffect(() => {
+    if (onScroll && typeof onScroll === "function") {
+      onScroll({
+        verticalPercent: yPercent,
+        horizontalPercent: xPercent,
+      });
+    }
     if (autoSplit) {
       setSplitProgress(true);
       const timmer = setTimeout(() => {
