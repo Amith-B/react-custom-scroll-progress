@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { ScrollContainer } from "../ScrollContainer";
 import { positions } from "./../../utils/propCheck";
 import { useScroll } from "./../../hooks/scroll";
