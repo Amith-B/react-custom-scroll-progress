@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
-    "start": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "build-lib": "rollup -c"
   },
   "license": "MIT",
