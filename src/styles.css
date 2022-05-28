@@ -41,6 +41,7 @@
 .rcsp-progressbar__thumb {
   background-color: red;
   border-radius: 10px;
+  z-index: 1000;
 }
 
 /* ----------------Circular progressbar styles---------------- */
