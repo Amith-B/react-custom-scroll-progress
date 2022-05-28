@@ -1,12 +1,18 @@
 # react-custom-scroll-progress
 
-# Installation
-
-`npm i react-custom-scroll-progress`
-
-`import 'react-custom-scroll-progress/dist/index.css'`
+# Usage
+   
+   ### Installation
+   `npm i react-custom-scroll-progress`
+   
+   ### Style import
+   `import 'react-custom-scroll-progress/dist/index.css'`
 
 This assumes that you are using react project to consume this library.
+
+# Storybook Demo
+
+[Storybook Demo Link](https://react-custom-scroll-progress.vercel.app/ "Storybook Link")
 
 # Types of progressbars
 
