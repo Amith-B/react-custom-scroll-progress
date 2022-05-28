@@ -31,8 +31,10 @@ export default {
 export const Basic = (args) => {
   return (
     <CircularProgressBar {...args}>
-      {Array.from(Array(args._exampleTextLineCount).keys()).map(() => (
-        <div style={{ whiteSpace: "nowrap" }}>{args._exampleText}</div>
+      {Array.from(Array(args._exampleTextLineCount).keys()).map((i) => (
+        <div key={"a" + i} style={{ whiteSpace: "nowrap" }}>
+          {args._exampleText}
+        </div>
       ))}
     </CircularProgressBar>
   );
@@ -70,4 +72,44 @@ Customized.args = {
     backgroundColor: "coral",
     boxShadow: "0 0 16px 4px coral",
   },
+};
+
+export const Nested = (args) => {
+  return (
+    <CircularProgressBar {...args}>
+      {Array.from(Array(args._exampleTextLineCount).keys()).map((i) => (
+        <div key={"a" + i} style={{ whiteSpace: "nowrap" }}>
+          {args._exampleText}
+        </div>
+      ))}
+      <CircularProgressBar
+        {...args}
+        style={{
+          margin: "auto",
+          border: "1px solid",
+          height: "200px",
+          width: "400px",
+        }}
+      >
+        {Array.from(Array(args._exampleTextLineCount * 2).keys()).map((i) => (
+          <div key={"b" + i} style={{ whiteSpace: "nowrap" }}>
+            {args._exampleText}
+          </div>
+        ))}
+      </CircularProgressBar>
+      {Array.from(Array(args._exampleTextLineCount).keys()).map((i) => (
+        <div key={"c" + i} style={{ whiteSpace: "nowrap" }}>
+          {args._exampleText}
+        </div>
+      ))}
+    </CircularProgressBar>
+  );
+};
+
+Nested.args = {
+  ...Customized.args,
+  _exampleTextLineCount: 10,
+  autoSplit: false,
+  autoHide: false,
+  currentState: ProgressBarCurrentState.collapse,
 };
