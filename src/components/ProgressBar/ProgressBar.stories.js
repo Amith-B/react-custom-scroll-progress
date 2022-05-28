@@ -80,9 +80,9 @@ Basic.args = {
   yScrollBarPosition: positions.top,
   xScrollBarPosition: positions.left,
   yScrollBarThumbStyle: { backgroundColor: "red" },
-  _exampleTextLineCount: 40,
+  _exampleTextLineCount: 100,
   _exampleText:
-    "Mollit Lorem cillum irure eiusmod aliquip ea officia. Exercitation ipsum officia laborum. Laboris enim quis incididunt labore esse ea voluptate",
+    "Mollit Lorem cillum irure eiusmod aliquip ea officia. Exercitation ipsum officia laborum. Laboris enim quis incididunt labore esse ea voluptate.Mollit Lorem cillum irure eiusmod aliquip ea officia. Exercitation ipsum officia laborum. Laboris enim quis incididunt labore esse ea voluptate",
 };
 
 Nested.args = {

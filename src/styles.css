@@ -9,6 +9,7 @@
   scrollbar-width: none;
 }
 
+/* -----------------Linear progressbar styles------------- */
 .rcsp-progressbar__position-left {
   position: absolute;
   left: 0;
@@ -40,4 +41,92 @@
 .rcsp-progressbar__thumb {
   background-color: red;
   border-radius: 10px;
+}
+
+/* ----------------Circular progressbar styles---------------- */
+
+.rcsp-circularbar__track {
+  border: 4px solid transparent;
+  transition: all 0.25s ease;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  box-shadow: 0 0 16px 4px black;
+}
+
+.rcsp-circularbar__track-hidden {
+  opacity: 0;
+}
+
+.rcsp-circularbar__track-horizontal {
+  opacity: 0;
+}
+
+.rcsp-circularbar__track-split:not(.rcsp-circularbar__track-hidden) {
+  right: 70px;
+  opacity: 1;
+}
+
+.rcsp-circularbar__track svg {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+}
+
+:root {
+  --outerStrokeoffset: 138;
+  --innerStrokeoffset: 90;
+}
+
+.rcsp-circularbar__track svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: white;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+  stroke-dasharray: var(--outerStrokeoffset);
+}
+
+.rcsp-circularbar__track svg circle:nth-child(2) {
+  stroke-dasharray: var(--innerStrokeoffset);
+}
+
+.rcsp-circularbar__track svg circle:nth-child(1) {
+  stroke-dashoffset: calc(
+    var(--outerStrokeoffset) -
+      (var(--outerStrokeoffset) * var(--percent-outer, 0)) / 100
+  );
+}
+
+.rcsp-circularbar__track svg circle:nth-child(2) {
+  stroke-dashoffset: calc(
+    var(--innerStrokeoffset) -
+      (var(--innerStrokeoffset) * var(--percent-inner, 0)) / 100
+  );
+}
+
+.rcsp-circularbar__percent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 0.8rem;
+  padding-top: 2px;
+}
+
+.rcsp-circularbar__percent-value {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.rcsp-circularbar__percent-orientation {
+  font-size: 0.8rem;
 }

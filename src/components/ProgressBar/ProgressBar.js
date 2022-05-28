@@ -24,7 +24,7 @@ export const ProgressBar = ({
       style={style}
       ref={contentRef}
       hideNativeScrollbar={hideNativeScrollbar}
-      yScrollComponent={
+      scrollComponent1={
         yPercent !== undefined && (
           <ScrollTrack
             percent={yPercent}
@@ -34,7 +34,7 @@ export const ProgressBar = ({
           />
         )
       }
-      xScrollComponent={
+      scrollComponent2={
         xPercent !== undefined && (
           <ScrollTrack
             percent={xPercent}

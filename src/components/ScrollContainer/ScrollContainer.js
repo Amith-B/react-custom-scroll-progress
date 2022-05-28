@@ -6,8 +6,8 @@ export const ScrollContainer = React.forwardRef(
       children,
       style,
       hideNativeScrollbar = false,
-      yScrollComponent,
-      xScrollComponent,
+      scrollComponent1,
+      scrollComponent2,
     },
     ref
   ) => {
@@ -17,12 +17,13 @@ export const ScrollContainer = React.forwardRef(
         style={{
           width: "100%",
           height: "100%",
-          position: "relative",
           ...style,
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        {yScrollComponent}
-        {xScrollComponent}
+        {scrollComponent1}
+        {scrollComponent2}
         <div
           className={`rcsp-scrollbar__content ${
             hideNativeScrollbar ? "rcsp-native-scrollbar__hidden" : ""

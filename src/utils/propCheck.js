@@ -12,3 +12,16 @@ export const checkScrollBarPosition = (position) => {
 
   return positions.top;
 };
+
+export const ProgressBarCurrentState = {
+  split: "split",
+  collapse: "collapse",
+};
+
+export const checkProgressBarCurrentState = (state) => {
+  if (state in ProgressBarCurrentState) {
+    return state;
+  }
+
+  return ProgressBarCurrentState.collapse;
+};
