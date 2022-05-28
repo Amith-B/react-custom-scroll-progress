@@ -4,7 +4,7 @@
 
 `npm i react-custom-scroll-progress`
 
-import 'react-custom-scroll-progress/dist/index.css'
+`import 'react-custom-scroll-progress/dist/index.css'`
 
 This assumes that you are using react project to consume this library.
 
