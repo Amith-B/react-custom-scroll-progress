@@ -4,9 +4,6 @@ export const useScroll = (contentRef) => {
   const [xPercent, setXPercent] = useState(0);
   const [yPercent, setYPercent] = useState(0);
 
-  const [yViewPercent, setYViewPercent] = useState(0);
-  const [xViewPercent, setXViewPercent] = useState(0);
-
   useEffect(() => {
     contentRef.current &&
       contentRef.current.addEventListener("scroll", handleScroll);
@@ -54,22 +51,10 @@ export const useScroll = (contentRef) => {
           : (target.scrollLeft / (target.scrollWidth - target.clientWidth)) *
             100;
 
-      setXViewPercent(viewPercentX);
       setXPercent(percentX);
-
-      setYViewPercent(viewPercentY);
       setYPercent(percentY);
     }
   };
 
-  return [
-    yPercent,
-    xPercent,
-    setYPercent,
-    setXPercent,
-    yViewPercent,
-    xViewPercent,
-    setYViewPercent,
-    setXViewPercent,
-  ];
+  return [yPercent, xPercent, setYPercent, setXPercent];
 };
