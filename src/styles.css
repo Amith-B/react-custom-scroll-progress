@@ -109,7 +109,8 @@
   );
 }
 
-.rcsp-circularbar__percent {
+.rcsp-circularbar__percent,
+.rcsp-circularbar__cross-arrow {
   position: absolute;
   left: 0;
   top: 0;
@@ -121,6 +122,10 @@
   flex-direction: column;
   line-height: 0.8rem;
   padding-top: 2px;
+}
+
+.rcsp-circularbar__cross-arrow {
+  padding: 0;
 }
 
 .rcsp-circularbar__percent-value {
@@ -135,4 +140,9 @@
 #doubleArray {
   width: 14px;
   height: 14px;
+}
+
+#arrowCross {
+  width: 18px;
+  height: 18px;
 }
