@@ -5,7 +5,7 @@
    ### Installation
    `npm i react-custom-scroll-progress`
    
-   ### Style import
+   ### Import styles in App.js
    `import 'react-custom-scroll-progress/dist/index.css'`
 
 This assumes that you are using react project to consume this library.
@@ -44,3 +44,5 @@ This assumes that you are using react project to consume this library.
    * `autoSplit` -> `boolean` to auto split vertical and horizontal progressbar when user scrolls on page
    * `autoHide` -> `boolean` to auto hide the progress bar when there is no scroll interaction
    * `onScroll` -> emits the percentage of scroll for both vertical and horizontal
+
+## Note: These parent html element or the component itself should have some width and height specified to make it work.
