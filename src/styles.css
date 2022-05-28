@@ -131,3 +131,8 @@
 .rcsp-circularbar__percent-orientation {
   font-size: 0.8rem;
 }
+
+#doubleArray {
+  width: 14px;
+  height: 14px;
+}

@@ -52,6 +52,8 @@ export const CircularProgressBar = ({
       }, 1000);
 
       return () => clearTimeout(timmer);
+    } else {
+      setHide(false);
     }
   }, [yPercent, xPercent, autoHide]);
 

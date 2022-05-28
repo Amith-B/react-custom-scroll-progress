@@ -39,24 +39,27 @@ export const useScroll = (contentRef) => {
   };
 
   const calculatePercent = (target) => {
-    const viewPercentY = (target.clientHeight / target.scrollHeight) * 100;
-    const viewPercentX = (target.clientWidth / target.scrollWidth) * 100;
+    if (target) {
+      const viewPercentY = (target.clientHeight / target.scrollHeight) * 100;
+      const viewPercentX = (target.clientWidth / target.scrollWidth) * 100;
 
-    const percentY =
-      viewPercentY === 100
-        ? undefined
-        : (target.scrollTop / (target.scrollHeight - target.clientHeight)) *
-          100;
-    const percentX =
-      viewPercentX === 100
-        ? undefined
-        : (target.scrollLeft / (target.scrollWidth - target.clientWidth)) * 100;
+      const percentY =
+        viewPercentY === 100
+          ? undefined
+          : (target.scrollTop / (target.scrollHeight - target.clientHeight)) *
+            100;
+      const percentX =
+        viewPercentX === 100
+          ? undefined
+          : (target.scrollLeft / (target.scrollWidth - target.clientWidth)) *
+            100;
 
-    setXViewPercent(viewPercentX);
-    setXPercent(percentX);
+      setXViewPercent(viewPercentX);
+      setXPercent(percentX);
 
-    setYViewPercent(viewPercentY);
-    setYPercent(percentY);
+      setYViewPercent(viewPercentY);
+      setYPercent(percentY);
+    }
   };
 
   return [
