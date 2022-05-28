@@ -1,6 +1,6 @@
 {
   "name": "react-custom-scroll-progress",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A component wrapper to show the scroll progress of it's child component",
   "main": "index.js",
   "scripts": {
