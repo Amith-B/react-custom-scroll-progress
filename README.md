@@ -45,4 +45,4 @@ This assumes that you are using react project to consume this library.
    * `autoHide` -> `boolean` to auto hide the progress bar when there is no scroll interaction
    * `onScroll` -> emits the percentage of scroll for both vertical and horizontal
 
-## Note: These parent html element or the component itself should have some width and height specified to make it work.
+## Note: The parent html element of progressbar component or the progressbar component itself should have some width and height specified to make it work.
