@@ -18,6 +18,10 @@
     "type": "git",
     "url": "https://github.com/Amith-B/react-custom-scroll-progress.git"
   },
+  "bugs": {
+    "url": "https://github.com/Amith-B/react-custom-scroll-progress/issues"
+  },
+  "homepage": "https://react-custom-scroll-progress.vercel.app",
   "eslintConfig": {
     "extends": [
       "react-app",
