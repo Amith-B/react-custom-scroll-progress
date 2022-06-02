@@ -1,6 +1,6 @@
 {
   "name": "react-custom-scroll-progress",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A component wrapper to show the scroll progress of it's child component",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Amith-B/react-custom-scroll-progress/issues"
   },
-  "homepage": "https://react-custom-scroll-progress.vercel.app",
+  "homepage": "https://github.com/Amith-B/react-custom-scroll-progress#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
